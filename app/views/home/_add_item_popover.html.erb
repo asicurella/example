@@ -1,0 +1,39 @@
+<!-- _add_item_popover.html.erb -->
+<div id="quickAddPopover_<%= product.id %>" style="display: none; position: absolute; background-color: #fff; border: 1px solid #ccc; padding: 15px;">
+    <div id="popoverContent_<%= product.id %>">
+        <!-- Popover content will be dynamically updated -->
+        <p>This is your default popover content for <%= product.name %>.</p>
+        <button id="addToCartButton_<%= product.id %>">Add <%= product.name %> to Cart</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('turbo:load', () => {
+    document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('quickAddButton')) {
+        let productId = event.target.dataset.productId;
+        let productName = event.target.dataset.productName;
+        let productPrice = event.target.dataset.productPrice;
+  
+        // Update popover content dynamically
+        let popoverContent = `
+          <h3>${productName}</h3>
+          <p>Price: ${productPrice}</p>
+          <button id="addToCartButton">Add ${productName} to Cart</button>
+        `;
+        document.querySelector('#popoverContent').innerHTML = popoverContent;
+  
+        // Show popover
+        document.querySelector('#quickAddPopover').style.display = 'block';
+      }
+    });
+  
+    // Click event to close the popover when clicking outside of it
+    document.addEventListener('mouseup', function(event) {
+      let container = document.querySelector('#quickAddPopover');
+      if (!container.contains(event.target)) {
+        container.style.display = 'none';
+      }
+    });
+  });
+  </script>

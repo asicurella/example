@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.montserrat-sitewide {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+.text-nav{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.nails-logo{
+    width: 10em;
+    max-width: none !important;
+}
+.header-color{
+    background-color: rgba(255, 255, 255, 0.816);
+    position: sticky;
+}
+.nav-top-grid{
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    display: grid;
+    
+    grid-template-rows: auto auto;
+    gap: 16px;
+}

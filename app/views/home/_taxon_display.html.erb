@@ -1,0 +1,21 @@
+<div class="products wrapper <%= theme %> py-7">
+  <section class="products_section col-span-full md:col-span-9 lg:col-span-10 sm:mx-8">
+    <div class="cat-header flex mb-6 flex-col">
+      <%# <h1 class="products__taxon-title mb-4 font-mono text-h3 lg:text-h2 text-center"><%= taxon.name %#></h1>
+      <p class="text-red text-center mb-4"><%= taxon.description %#></p>%>
+    </div>
+     <div class="flex items-center justify-between mb-7">
+      <h3 class="site-font text-h4 md:text-h4 ml-4"><%= title %></h3>
+          <% if defined?(taxon) %>
+            <%= render "shared/call_to_action", { label: "Shop All", type: 'secondary', url: taxon_seo_url( taxon ) } %>
+            
+          <% end %>
+    </div>
+    <%= render 'products/products', products: products, taxon: taxon %>
+    <% unless params[:keywords].present? %>
+      <% cache [I18n.locale, taxon] do %>
+        <!-- Add content to be cached if needed -->
+      <% end %>
+    <% end %>
+  </section>
+</div>

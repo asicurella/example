@@ -1,0 +1,6 @@
+<%= image_tag "flowers.png", class: "nails-logo" %>
+<%= render 'collection', { title: "French Tips", products: @french_tip_products, taxon: @french_tip_taxon }%>
+<% if defined?(taxon) %>
+            <%= render "shared/call_to_action", { label: "Shop All", type: 'secondary', url: taxon_seo_url( taxon ) } %>
+            
+          <% end %>

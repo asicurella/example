@@ -1,0 +1,12 @@
+*{
+    background-color: red;
+}
+body{
+    color: orange;
+}
+.admin {
+    background-color: red !important;
+}
+#content-header{
+    background-color: blue;
+}

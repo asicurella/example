@@ -1,0 +1,22 @@
+.product-card-product-name{
+    font-weight: bold;
+
+}
+.option-text{
+    font-size: small;
+}
+.divider{
+    border-top: solid gray 1px;
+}
+
+.prod-info{
+    padding-right: 1em;
+}
+.prod-card-image{
+    aspect-ratio: 16/9;
+}
+.prod-img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}

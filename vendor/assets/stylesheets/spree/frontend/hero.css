@@ -1,0 +1,57 @@
+.hero-section{
+    height: 100vh;
+}
+.hero-img{
+    height: 30em;
+}
+.hero-text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    
+
+}
+h1.hero-text{
+    font-size: 40px;
+    width: 14em;
+}
+/* second hero */
+.hero-bit{
+ 
+}
+.gradient{
+    background-image: linear-gradient(290deg, rgb(181 181 181 / 12%) 30%, rgb(0 0 0 / 86%));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.hero-bg-container{
+    contain: content;
+    height: 90vh;
+    overflow: clip;
+    background-color: black;
+    position: relative;
+}
+.hero-bg-img{
+    width: 100vw;
+    transform: translateY(-10%);
+
+}
+.hero-overlay{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.hero-text-group{
+    color: white;
+
+}
+.hero-btn{
+    background-color: rgb(221, 126, 142);
+}
+.hero-btn:hover{
+    background-color: rgba(245, 173, 185, 0.962);
+}
